@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fefb31fb-b109-448b-8e96-3f6cffd74e4e" name="Default" comment="">
+    <list default="true" id="fefb31fb-b109-448b-8e96-3f6cffd74e4e" name="Default" comment="test2">
       <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
@@ -29,11 +29,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="javaTest.iml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="javaTest.iml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/javaTest.iml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="253">
               <caret line="11" column="9" lean-forward="true" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="24">
+              <caret line="10" column="9" lean-forward="true" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -249,7 +259,7 @@
       <option name="presentableId" value="Default" />
       <updated>1507728196995</updated>
       <workItem from="1507728201613" duration="943000" />
-      <workItem from="1507771422941" duration="5155000" />
+      <workItem from="1507771422941" duration="5393000" />
     </task>
     <task id="LOCAL-00001" summary="test1">
       <created>1507728332212</created>
@@ -300,11 +310,18 @@
       <option name="project" value="LOCAL" />
       <updated>1507776938913</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="test2">
+      <created>1507776962745</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1507776962745</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6098000" />
+    <option name="totallyTimeSpent" value="6336000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
@@ -402,18 +419,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/javaTest.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="253">
           <caret line="11" column="9" lean-forward="true" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="10" column="9" lean-forward="true" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
           <folding />
         </state>
       </provider>
