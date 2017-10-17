@@ -1,0 +1,30 @@
+body{
+	margin-left:10px;
+	margin-top:5px;
+	margin-right:10px;
+	font-size: 13px;
+}
+#map
+{
+	padding:0; 
+	height: 100%;
+	display: block;
+}
+
+#mapWin
+{
+	margin-left:10px;
+	margin-top:5px;
+	margin-right:10px;
+	margin-bottom: 15px;
+}
+.simpleInfoWindow .title
+{
+	display: none;
+}
+.attachName{
+    color: blue;
+    cursor: pointer;
+    padding-right: 20px;
+    text-decoration: underline;
+}

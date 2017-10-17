@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:util="http://www.springframework.org/schema/util"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xmlns:aop="http://www.springframework.org/schema/aop"
+    xmlns:tx="http://www.springframework.org/schema/tx"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:jaxws="http://cxf.apache.org/jaxws"
+    xmlns:jaxrs="http://cxf.apache.org/jaxrs"
+    xsi:schemaLocation="
+    http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+    http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.1.xsd
+    http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.1.xsd
+    http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.1.xsd
+    http://www.springframework.org/schema/context 
+    http://www.springframework.org/schema/context/spring-context-3.1.xsd
+    http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://cxf.apache.org/jaxws http://cxf.apache.org/schemas/jaxws.xsd
+	http://cxf.apache.org/jaxrs http://cxf.apache.org/schemas/jaxrs.xsd">
+    <context:annotation-config /> 
+   
+   <!-- 注解注出的bean默认的id和name是类名第一个字母改为小写-->
+   <context:component-scan base-package="com.xc.test.dao"></context:component-scan>
+   <context:component-scan base-package="com.xc.test.model"></context:component-scan>
+   <context:component-scan base-package="com.xc.test.service"></context:component-scan>
+    
+   <bean class="com.xc.test.utils.SpringContextHolder" lazy-init="false" />
+   
+   <!-- 导入mongodb的配置文件 -->
+   <import resource="classpath*:/config/mongodb-context.xml"/>
+   <import resource="classpath*:/config/cxf.xml" />
+
+    <!--soap风格服务相关的bean-->
+   <bean id="soapServiceImp" class="com.xc.test.webService.soapService"/>
+   <jaxws:endpoint id="soapEndPoint" implementor="#soapServiceImp" address="/soapService" />
+   
+   <jaxws:endpoint id="basicDataService" implementor="com.xc.test.webService.BasicDataService" address="/basicDataService" />
+   <jaxws:endpoint id="seriesDataService" implementor="com.xc.test.webService.SeriesDataService" address="/seriesDataService" />
+    <jaxws:endpoint id="businessDataService" implementor="com.xc.test.webService.BusinessDataService" address="/businessDataService" />
+   
+   
+   <jaxws:client id="testWebServiceClient" serviceClass="com.xc.test.webService.soapService"
+   address="http://localhost:8081/javaTest/webServices/soapService" />
+   
+   <!--restful风格服务相关的bean-->
+   <bean id="restService" class="com.xc.test.webService.restfulService"></bean>
+   <jaxrs:server id="restEndPoint" address="/restService">
+            <jaxrs:serviceBeans>
+                <ref bean="restService"/>
+            </jaxrs:serviceBeans>
+            <!--<jaxrs:providers>
+                 <bean class="org.codehaus.jackson.jaxrs.JacksonJsonProvider"/>
+            </jaxrs:providers>-->
+   </jaxrs:server>
+        
+   <bean id="restTemplate" class="org.springframework.web.client.RestTemplate">
+        <property name="requestFactory">
+            <bean class="org.springframework.http.client.SimpleClientHttpRequestFactory">
+                <property name="readTimeout" value="30000"/>
+            </bean>
+        </property>
+    </bean> 
+    
+</beans>

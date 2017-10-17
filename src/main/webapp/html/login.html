@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>测试界面</title>
+<script src="../js/jquery.min.js"></script>
+    <script src="../js/joy.loader.js" modules="dataview"></script> 
+<script type="text/javascript"></script>
+<script>
+	function login() {
+	      var params = {};
+	      params.password = $("#password").val();
+	      params.username = $("#username").val();
+		  //ajax异步请求action只会返回所请求页面的html源代码。
+		  $.ajax({
+				url:'../html/UserAction.do?action=login',
+				async:false, //发送请求的地址
+				type:'POST',                               				
+				data:params,
+				dataType:'json', 
+				success: function(data) {
+					alert("success");
+					if(data == true)
+						window.location.href="./test.html?username="+params.username+"&password="+params.password;
+					else
+						alert("用户名或者密码错误");
+				},
+				error: function (data) 
+				{
+					alert("操作错误");
+				}	
+				});						
+	}
+	
+	function cancel() {
+		
+	}
+</script>
+</head>
+<body>
+<div>
+用户名:<br>
+<input type="text" id="username" value=""><br>
+密码:<br>
+<input type="text" id="password" value=""><br>
+<button type="button" id="login" name="login" onClick="login()">登录</button>
+<button type="button" id="cancel" name="cancel" onClick="cancel()">退出</button>
+</div>
+</body>
+</html>

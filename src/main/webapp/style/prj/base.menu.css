@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,body{
+  height: 100%;
+}
+#menuContain{
+	background: url("images/menbackground.png") no-repeat scroll 0 0 / 100% 100%;
+    height: 100%;
+    margin: 0 auto;
+    width: 100%;	
+}
+#contain{
+ width:801px;
+ height:600px;
+ margin:0 auto;
+}
+#firstMenu{
+    background: url("images/firstMenu.png") no-repeat scroll 0 0 / 538px 485px;
+    height: 529px;
+    width: 800px;
+     position: relative;
+}
+#basicMenu{
+	 background: url("images/secondBasicMenu.png") no-repeat scroll 0 0 / 228px 115px;
+    position: absolute;    height: 115px;
+    width: 228px;
+     right: 99px;
+    top: 0;
+}
+#deviceMenu{
+	background: url("images/secondDeviceMenu.png") no-repeat scroll 0 center / 228px 115px;
+    position: absolute;    height: 218px;
+    width: 228px;
+     right: 0;
+    top: 111px;
+}
+#systemMenu{
+	  background: url("images/secondSystemMenu.png") no-repeat scroll 0 0 / 228px 201px;
+    position: absolute;    height: 201px;
+    width: 228px;   right: 99px;
+    top: 325px;
+}
+.munity{
+	cursor:pointer;
+    height: 29px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 228px;
+}
+.deviceType{
+	cursor:pointer;
+    height: 29px;
+    position: absolute;
+    right: 0;
+    top: 42px;
+    width: 228px;
+}
+.device{
+	cursor:pointer;
+    height: 29px;
+    position: absolute;
+    right: 0;
+    top: 86px;
+    width: 228px;
+}
+.mapGetDevice{
+	cursor:pointer;
+    height: 29px;
+    position: absolute;
+    right: 0;
+    top: 52px;
+    width: 228px;
+}
+.deviceTree{
+	cursor:pointer;
+   height: 29px;
+    position: absolute;
+    right: 0;
+    top: 95px;
+    width: 228px;
+}
+.deviceTopo{
+	cursor:pointer;
+    height: 29px;
+    position: absolute;
+    right: 0;
+    top: 138px;
+    width: 228px;
+}
+.department{
+   cursor:pointer;
+    height: 29px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 228px;
+}
+.user{
+  cursor:pointer;
+    height: 29px;
+    position: absolute;
+    right: 0;
+    top: 43px;
+    width: 228px;
+}
+.dutyrole{
+    cursor:pointer;
+    height: 29px;
+    position: absolute;
+    right: 0;
+    top: 86px;
+    width: 228px;
+}
+.security{
+    cursor:pointer;
+    height: 29px;
+    position: absolute;
+    right: 0;
+    top: 129px;
+    width: 228px;
+}
+.log{
+    cursor:pointer;
+    height: 29px;
+    position: absolute;
+    right: 0;
+    top: 172px;
+    width: 228px;
+}
+#firstBasicMenu{
+      cursor: pointer;
+    height: 122px;
+    left: 290px;
+    position: absolute;
+    top: 14px;
+    width: 123px;
+}
+#firstDeviceMenu{
+    cursor: pointer;
+    height: 154px;
+    left: 371px;
+    position: absolute;
+    top: 150px;
+    width: 154px;
+}
+#firstSystemMenu{
+  cursor: pointer;
+    height: 112px;
+    left: 319px;
+    position: absolute;
+    top: 361px;
+    width: 116px;
+}

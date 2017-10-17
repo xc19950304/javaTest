@@ -1,0 +1,30 @@
+.period-list{
+	width:630px;
+	height:105px;
+	display:inline-block;
+	border:1px solid;
+}
+.period {
+    border: 1px solid #fff;
+    display: inline-block;
+    height: 17px;
+    margin-right: 3px;
+    padding: 4px 4px 1px;
+    position: relative;
+    white-space: nowrap;
+}
+.timeDiv{
+	height:35px;
+	width:65px;
+}
+.monthDiv{
+	height:25px;
+	width:28px;
+}
+.blue{
+	background-color:#397EBF;
+	color:white;
+}
+.distance{
+	padding-left:30px
+}
